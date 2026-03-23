@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uplift Digital Partner — Websites & Apps for Small Businesses</title>
+  <meta name="description" content="We build beautiful, modern websites and apps for small businesses. Custom websites, redesigns, branding, SEO, and ongoing support. Book a free consultation today.">
+  <meta name="keywords" content="web design, small business website, website redesign, SEO, branding, digital agency">
+  <meta name="author" content="Uplift Digital Partner">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Uplift Digital Partner — Websites & Apps for Small Businesses">
+  <meta property="og:description" content="We build beautiful, modern websites and apps for small businesses. Book a free consultation today.">
+  <meta property="og:image" content="https://upliftdigitalpartners.com/assets/images/og-image.png">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Uplift Digital Partner">
+  <meta name="twitter:description" content="Beautiful websites and apps for small businesses.">
+  <meta name="twitter:image" content="https://upliftdigitalpartners.com/assets/images/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container" style="display:flex;justify-content:flex-end;gap:2rem;align-items:center;">
+    <a href="mailto:upliftdigitalpartners@gmail.com" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.8rem;display:flex;align-items:center;gap:0.4rem;">&#9993; upliftdigitalpartners@gmail.com</a>
+    <a href="tel:+1234567890" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.8rem;display:flex;align-items:center;gap:0.4rem;">&#9742; (123) 456-7890</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="container">
+    <a href="#" class="logo">
+      <img src="assets/images/logo-nav.png" alt="Uplift Digital Partner" class="logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#portfolio">Work</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact" class="btn btn-amber">Book a Consultation</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">Now Accepting New Clients</div>
+      <h1>Your business deserves a <em>digital presence</em> that works</h1>
+      <p>We build beautiful, modern websites for small businesses — so your customers can find you, trust you, and choose you over the competition.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-amber">Book a Free Consultation &rarr;</a>
+        <a href="#portfolio" class="btn btn-outline">See Our Work</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-mockup">
+        <div class="mockup-browser">
+          <div class="mockup-dot"></div>
+          <div class="mockup-dot"></div>
+          <div class="mockup-dot"></div>
+        </div>
+        <div class="mockup-screen">
+          <div class="mockup-line"></div>
+          <div class="mockup-line"></div>
+          <div class="mockup-line"></div>
+          <div class="mockup-line"></div>
+          <div class="mockup-block">
+            <div class="mockup-card"></div>
+            <div class="mockup-card"></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-float-card top-card">
+        <div class="float-icon green">&#x2714;</div>
+        Site Live!
+      </div>
+      <div class="hero-float-card bottom-card">
+        <div class="float-icon blue">&#128200;</div>
+        +180% Traffic
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-bar">
+  <div class="container">
+    <div class="stat-item">
+      <h3>100<span>%</span></h3>
+      <p>Dedicated to Your Vision</p>
+    </div>
+    <div class="stat-item">
+      <h3>5<span>+</span></h3>
+      <p>Services Offered</p>
+    </div>
+    <div class="stat-item">
+      <h3>1:1</h3>
+      <p>Personal Attention</p>
+    </div>
+    <div class="stat-item">
+      <h3>24<span>hr</span></h3>
+      <p>Response Time</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-header">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-heading">Everything your business needs online</h2>
+      <p class="section-sub">From a brand-new website to a full redesign — we handle the tech so you can focus on running your business.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon amber-bg">&#127760;</div>
+        <h3>Custom Websites</h3>
+        <p>Modern, fast, mobile-friendly websites designed specifically for your brand. No cookie-cutter templates — every site is uniquely yours.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon coral-bg">&#127912;</div>
+        <h3>Brand &amp; UI Design</h3>
+        <p>First impressions matter. We craft logos, color palettes, and visual identities that make your brand instantly recognizable.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon blue-bg">&#128269;</div>
+        <h3>SEO &amp; Local Search</h3>
+        <p>Get found on Google when customers search for your services. We optimize your site so you show up where it counts.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon purple-bg">&#9881;&#65039;</div>
+        <h3>Website Revamps</h3>
+        <p>Have an outdated site? We'll modernize your design, speed up performance, and make it work beautifully on all devices.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon teal-bg">&#128736;</div>
+        <h3>Ongoing Support</h3>
+        <p>Websites need upkeep. We offer maintenance plans so your site stays secure, fast, and up-to-date — without you lifting a finger.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="process-header">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-heading">From idea to launch in four steps</h2>
+      <p class="section-sub">We keep things simple and transparent. No tech jargon, no surprises — just results.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-number">01</div>
+        <h3>Discovery Call</h3>
+        <p>We learn about your business, goals, and vision. This is a free, no-pressure conversation to see if we're a good fit.</p>
+        <span class="step-connector">&rarr;</span>
+      </div>
+      <div class="process-step">
+        <div class="step-number">02</div>
+        <h3>Design &amp; Plan</h3>
+        <p>We create mockups and a clear project plan. You see everything before a single line of code is written.</p>
+        <span class="step-connector">&rarr;</span>
+      </div>
+      <div class="process-step">
+        <div class="step-number">03</div>
+        <h3>Build &amp; Refine</h3>
+        <p>We develop your site or app with regular check-ins. Your feedback shapes every detail along the way.</p>
+        <span class="step-connector">&rarr;</span>
+      </div>
+      <div class="process-step">
+        <div class="step-number">04</div>
+        <h3>Launch &amp; Grow</h3>
+        <p>We launch your project and stick around. Need tweaks, updates, or new features? We're always here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="portfolio-header">
+      <div>
+        <div class="section-label">Our Work</div>
+        <h2 class="section-heading">Projects — coming soon</h2>
+      </div>
+      <a href="#contact" class="btn btn-primary">Be Our First Client &rarr;</a>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <div class="portfolio-thumb t1">
+          <div class="thumb-bg" style="font-size:1.5rem;color:rgba(255,255,255,0.4);">Your Project Here</div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-tag">Coming Soon</div>
+          <h3>Restaurant &amp; Food Service</h3>
+          <p>Websites with online menus &amp; reservations</p>
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-thumb t2">
+          <div class="thumb-bg" style="font-size:1.5rem;color:rgba(255,255,255,0.4);">Your Project Here</div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-tag">Coming Soon</div>
+          <h3>Healthcare &amp; Wellness</h3>
+          <p>Patient portals &amp; appointment booking</p>
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-thumb t3">
+          <div class="thumb-bg" style="font-size:1.5rem;color:rgba(255,255,255,0.4);">Your Project Here</div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-tag">Coming Soon</div>
+          <h3>Local Retail &amp; E-Commerce</h3>
+          <p>Online stores with local delivery</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="testimonials-header">
+      <div class="section-label">Client Reviews</div>
+      <h2 class="section-heading">What our clients will say</h2>
+      <p class="section-sub">We're just getting started — and we're committed to making every client our best reference. Your success story could be the first one here.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:220px;">
+        <div style="font-size:2.5rem;margin-bottom:1rem;opacity:0.15;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p style="font-style:normal;color:var(--text-muted);font-size:0.95rem;">"Your review could go here."</p>
+        <div style="margin-top:1rem;font-size:0.85rem;font-weight:600;color:var(--teal-deep);">— Future Happy Client</div>
+      </div>
+      <div class="testimonial-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:220px;">
+        <div style="font-size:2.5rem;margin-bottom:1rem;opacity:0.15;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p style="font-style:normal;color:var(--text-muted);font-size:0.95rem;">"Your review could go here."</p>
+        <div style="margin-top:1rem;font-size:0.85rem;font-weight:600;color:var(--teal-deep);">— Future Happy Client</div>
+      </div>
+      <div class="testimonial-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:220px;">
+        <div style="font-size:2.5rem;margin-bottom:1rem;opacity:0.15;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p style="font-style:normal;color:var(--text-muted);font-size:0.95rem;">"Your review could go here."</p>
+        <div style="margin-top:1rem;font-size:0.85rem;font-weight:600;color:var(--teal-deep);">— Future Happy Client</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK A CONSULTATION -->
+<section class="cta" id="contact">
+  <div class="container">
+    <div class="consult-header">
+      <div class="section-label">Book a Consultation</div>
+      <h2 class="section-heading">Let's talk about your business</h2>
+      <p class="section-sub">Answer a few quick questions and we'll set up a free consultation. Takes about 60 seconds.</p>
+    </div>
+    <div class="chat-wrapper">
+      <div class="chat-window" id="chatWindow">
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input-area" id="chatInputArea">
+          <input type="text" id="chatInput" class="chat-text-input" placeholder="Type your answer..." autocomplete="off">
+          <button class="chat-send-btn" id="chatSendBtn" onclick="sendChat()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="chat-sidebar">
+        <div class="sidebar-card">
+          <div class="sidebar-icon">&#128172;</div>
+          <h4>Free Consultation</h4>
+          <p>30-minute call to discuss your goals and how we can help.</p>
+        </div>
+        <div class="sidebar-card">
+          <div class="sidebar-icon">&#9201;</div>
+          <h4>Quick Response</h4>
+          <p>We'll confirm your consultation within 24 hours.</p>
+        </div>
+        <div class="sidebar-card">
+          <div class="sidebar-icon">&#128274;</div>
+          <h4>No Commitment</h4>
+          <p>Zero pressure. Just a conversation about your business.</p>
+        </div>
+        <div class="sidebar-contact">
+          <p>Prefer to reach out directly?</p>
+          <a href="mailto:upliftdigitalpartners@gmail.com">upliftdigitalpartners@gmail.com</a>
+          <a href="tel:+1234567890">(123) 456-7890</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <img src="assets/images/logo-nav.png" alt="Uplift Digital Partner" class="logo-img">
+        </a>
+        <p>Helping small businesses build a powerful online presence with modern websites and design. Your digital partner, every step of the way.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Custom Websites</a></li>
+          <li><a href="#services">Website Revamps</a></li>
+          <li><a href="#services">Brand Design</a></li>
+          <li><a href="#services">SEO &amp; Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#portfolio">Our Work</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="mailto:upliftdigitalpartners@gmail.com">upliftdigitalpartners@gmail.com</a></li>
+          <li><a href="tel:+1234567890">(123) 456-7890</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Uplift Digital Partner. All rights reserved.</span>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="Instagram">ig</a>
+        <a href="#" aria-label="Twitter">X</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- Main Script -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
