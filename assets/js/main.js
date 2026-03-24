@@ -329,8 +329,8 @@
   //    - "booking_owner" → notification to you (upliftdigitalpartners@gmail.com)
   //    - "booking_client" → confirmation to the client
   // 3. Copy your Public Key, Service ID, and Template IDs below:
-  var EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';     // from EmailJS dashboard > Account
-  var EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';     // from EmailJS > Email Services
+  var EMAILJS_PUBLIC_KEY = 'CcPOuyJ6RlKbUYLYs';     // from EmailJS dashboard > Account
+  var EMAILJS_SERVICE_ID = 'service_f5jkuya';     // from EmailJS > Email Services
   var EMAILJS_TEMPLATE_OWNER = 'booking_owner';   // template for your team
   var EMAILJS_TEMPLATE_CLIENT = 'booking_client'; // template for the client
 
