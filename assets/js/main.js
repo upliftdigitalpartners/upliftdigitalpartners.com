@@ -331,8 +331,8 @@
   // 3. Copy your Public Key, Service ID, and Template IDs below:
   var EMAILJS_PUBLIC_KEY = 'CcPOuyJ6RlKbUYLYs';     // from EmailJS dashboard > Account
   var EMAILJS_SERVICE_ID = 'service_f5jkuya';     // from EmailJS > Email Services
-  var EMAILJS_TEMPLATE_OWNER = 'booking_owner';   // template for your team
-  var EMAILJS_TEMPLATE_CLIENT = 'booking_client'; // template for the client
+  var EMAILJS_TEMPLATE_OWNER = 'template_ywz9flb';   // template for your team
+  var EMAILJS_TEMPLATE_CLIENT = 'template_7mvi1ej'; // template for the client
 
   // Initialize EmailJS
   if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
