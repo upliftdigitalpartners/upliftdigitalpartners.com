@@ -1,6 +1,6 @@
-# Uplift Digital Partner
+# Uplift Digital Partners
 
-Official website for **Uplift Digital Partner** — a digital agency helping small businesses build modern websites, apps, and online presence.
+Official website for **Uplift Digital Partners** — a digital agency helping small businesses build modern websites, apps, and online presence.
 
 🌐 [upliftdigitalpartner.com](https://upliftdigitalpartner.com)
 
@@ -68,4 +68,4 @@ Update the `CNAME` file with your actual domain name.
 
 ## License
 
-© 2026 Uplift Digital Partner. All rights reserved.
+© 2026 Uplift Digital Partners. All rights reserved.
