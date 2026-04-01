@@ -279,9 +279,11 @@
 
   function setInputState(step) {
     const s = chatData.steps[step];
-    // Remove any old skip button
+    // Remove any old skip/back buttons
     var oldSkip = document.querySelector('.chat-skip-btn');
     if (oldSkip) oldSkip.remove();
+    var oldBack = document.querySelector('.chat-back-btn');
+    if (oldBack) oldBack.remove();
     clearValidationError();
 
     if (!s || s.type === 'auto' || s.type === 'chips' || s.type === 'timeslots' || s.type === 'calendar') {
@@ -302,6 +304,49 @@
         scrollChat();
       }
     }
+
+    // Show back button if not on first step
+    if (step > 0 && s && s.type !== 'auto') {
+      var backBtn = document.createElement('button');
+      backBtn.className = 'chat-back-btn';
+      backBtn.innerHTML = '\u2190 Go back &amp; edit previous answer';
+      backBtn.addEventListener('click', goBackStep);
+      msgContainer.appendChild(backBtn);
+      scrollChat();
+    }
+  }
+
+  function goBackStep() {
+    clearValidationError();
+    // Remove back/skip buttons
+    var oldBack = document.querySelector('.chat-back-btn');
+    if (oldBack) oldBack.remove();
+    var oldSkip = document.querySelector('.chat-skip-btn');
+    if (oldSkip) oldSkip.remove();
+    // Remove any active chips/calendar/timeslots
+    var activeChips = document.getElementById('activeChips');
+    if (activeChips) activeChips.remove();
+
+    // Go back one step (skip address step if it was skipped going forward)
+    chatData.step--;
+    if (chatData.step > 0 && chatData.steps[chatData.step].key === 'address' && isVideoCall()) {
+      chatData.step--;
+    }
+
+    // Remove the last bot message and user answer from the DOM
+    // Find and remove: the user bubble, then the bot bubble before it
+    var bubbles = msgContainer.querySelectorAll('.chat-bubble');
+    var removed = 0;
+    for (var i = bubbles.length - 1; i >= 0 && removed < 2; i--) {
+      bubbles[i].remove();
+      removed++;
+    }
+
+    // Clear the stored answer for this step
+    delete chatData.answers[chatData.steps[chatData.step].key];
+
+    // Re-show this step
+    advanceChat();
   }
 
   function processAnswer(value) {

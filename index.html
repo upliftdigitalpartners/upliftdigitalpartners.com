@@ -12,6 +12,7 @@
   <meta property="og:title" content="Uplift Digital Partners — Websites & Apps for Small Businesses">
   <meta property="og:description" content="We build beautiful, modern websites and apps for small businesses. Book a free consultation today.">
   <meta property="og:image" content="https://upliftdigitalpartners.com/assets/images/og-image.png">
+  <meta property="og:url" content="https://upliftdigitalpartners.com/">
   <meta property="og:type" content="website">
 
   <!-- Twitter Card -->
@@ -23,6 +24,27 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://upliftdigitalpartners.com/">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Uplift Digital Partners",
+    "url": "https://upliftdigitalpartners.com",
+    "logo": "https://upliftdigitalpartners.com/assets/images/logo-nav.png",
+    "description": "We build beautiful, modern websites and apps for small businesses. Custom websites, redesigns, branding, SEO, and ongoing support.",
+    "email": "upliftdigitalpartners@gmail.com",
+    "telephone": "+1-646-407-8870",
+    "serviceType": ["Web Design", "Web Development", "SEO", "Brand Design", "Website Maintenance"],
+    "areaServed": "US",
+    "priceRange": "$$",
+    "sameAs": []
+  }
+  </script>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,21 +55,30 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Google Analytics — Replace G-XXXXXXXXXX with your Measurement ID from https://analytics.google.com -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script> -->
 </head>
-<body>
+<body id="top">
 
 <!-- TOP BAR -->
 <div class="top-bar">
   <div class="container" style="display:flex;justify-content:flex-end;gap:2rem;align-items:center;">
     <a href="mailto:upliftdigitalpartners@gmail.com" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.8rem;display:flex;align-items:center;gap:0.4rem;">&#9993; upliftdigitalpartners@gmail.com</a>
-    <a href="tel:+1234567890" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.8rem;display:flex;align-items:center;gap:0.4rem;">&#9742; (123) 456-7890</a>
+    <a href="tel:+16464078870" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.8rem;display:flex;align-items:center;gap:0.4rem;">&#9742; (646) 407-8870</a>
   </div>
 </div>
 
 <!-- NAV -->
 <nav id="navbar">
   <div class="container">
-    <a href="#" class="logo">
+    <a href="#top" class="logo" aria-label="Back to top">
       <img src="assets/images/logo-nav.png" alt="Uplift Digital Partners" class="logo-img">
     </a>
     <ul class="nav-links">
@@ -311,7 +342,7 @@
         <div class="sidebar-contact">
           <p>Prefer to reach out directly?</p>
           <a href="mailto:upliftdigitalpartners@gmail.com">upliftdigitalpartners@gmail.com</a>
-          <a href="tel:+1234567890">(123) 456-7890</a>
+          <a href="tel:+16464078870">(646) 407-8870</a>
         </div>
       </div>
     </div>
@@ -323,7 +354,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#" class="logo">
+        <a href="#top" class="logo" aria-label="Back to top">
           <img src="assets/images/logo-nav.png" alt="Uplift Digital Partners" class="logo-img">
         </a>
         <p>Helping small businesses build a powerful online presence with modern websites and design. Your digital partner, every step of the way.</p>
@@ -350,17 +381,13 @@
         <h4>Get in Touch</h4>
         <ul>
           <li><a href="mailto:upliftdigitalpartners@gmail.com">upliftdigitalpartners@gmail.com</a></li>
-          <li><a href="tel:+1234567890">(123) 456-7890</a></li>
+          <li><a href="tel:+16464078870">(646) 407-8870</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 Uplift Digital Partners. All rights reserved.</span>
-      <div class="footer-socials">
-        <a href="#" aria-label="LinkedIn">in</a>
-        <a href="#" aria-label="Instagram">ig</a>
-        <a href="#" aria-label="Twitter">X</a>
-      </div>
+      <a href="privacy.html" style="color:var(--text-muted);font-size:0.8rem;text-decoration:none;">Privacy Policy</a>
     </div>
   </div>
 </footer>
