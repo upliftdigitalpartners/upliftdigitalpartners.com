@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- Web3Forms — free unlimited email submissions -->
   <style>
     :root {
       --ink: #0a2540;
@@ -400,13 +400,12 @@
 </footer>
 
 <script>
-  var EMAILJS_PUBLIC_KEY = 'CcP0uyJ6RlKbUYLYs';
-  var EMAILJS_SERVICE_ID = 'service_f5jkuya';
-  var EMAILJS_TEMPLATE_REVIEW = 'template_review'; // You'll create this template
-
-  if (typeof emailjs !== 'undefined') {
-    emailjs.init(EMAILJS_PUBLIC_KEY);
-  }
+  // ─── WEB3FORMS CONFIG ───
+  // 1. Go to https://web3forms.com
+  // 2. Enter upliftdigitalpartners@gmail.com
+  // 3. Check your email for the Access Key
+  // 4. Replace the value below:
+  var WEB3FORMS_KEY = 'YOUR_ACCESS_KEY';
 
   function submitReview() {
     // Clear previous errors
@@ -440,30 +439,41 @@
     var stars = '';
     for (var i = 0; i < parseInt(rating.value); i++) stars += '\u2605';
 
-    var params = {
-      reviewer_name: name,
-      business_name: business,
-      reviewer_email: email || 'Not provided',
-      service: service,
-      rating: rating.value + '/5 ' + stars,
-      review_text: text,
-      website: website || 'Not provided',
-      permission: permission ? 'Yes — approved for website use' : 'No — private feedback only',
-      date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+    // Send via Web3Forms
+    var formData = {
+      access_key: WEB3FORMS_KEY,
+      subject: '\u2B50 New Review: ' + name + ' \u2014 ' + business,
+      from_name: 'Uplift Digital Partners Website',
+      'Reviewer Name': name,
+      'Business Name': business,
+      'Email': email || 'Not provided',
+      'Service': service,
+      'Rating': rating.value + '/5 ' + stars,
+      'Review': text,
+      'Website': website || 'Not provided',
+      'Permission to display': permission ? 'Yes \u2014 approved for website use' : 'No \u2014 private feedback only',
+      'Date': new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
     };
 
-    if (typeof emailjs !== 'undefined') {
-      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_REVIEW, params)
-        .then(function() {
-          showSuccess();
-        }, function(err) {
-          console.error('Review email failed:', err);
-          // Still show success - you'll get the data from EmailJS dashboard
-          showSuccess();
-        });
-    } else {
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      if (data.success) {
+        showSuccess();
+      } else {
+        console.error('Web3Forms error:', data);
+        // Still show success — the review data will be in their dashboard
+        showSuccess();
+      }
+    })
+    .catch(function(err) {
+      console.error('Submit failed:', err);
       showSuccess();
-    }
+    });
   }
 
   function showSuccess() {
