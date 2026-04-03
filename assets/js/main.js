@@ -353,6 +353,8 @@
     clearValidationError();
     var oldSkip = document.querySelector('.chat-skip-btn');
     if (oldSkip) oldSkip.remove();
+    var oldBack = document.querySelector('.chat-back-btn');
+    if (oldBack) oldBack.remove();
     addBubble(value, 'user');
     chatData.answers[chatData.steps[chatData.step].key] = value;
     chatData.step++;
